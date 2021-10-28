@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du lich</title>
+    <style>
+        :root {
+
+            --navmenuheight: 35px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            background: white;
+        }
+
+        body {
+            width: 1500px;
+            background: white;
+            margin: 0 auto;
+        }
+
+        #navbar{
+            margin: 0 auto;
+	        height: var(--navmenuheight);
+            background:#1D9EAD;
+        }
+
+        #navbar .navbarmenu {
+            height: 100%;
+            margin-left: 35px;
+            float: left;
+            background-color: #1D9EAD;
+        }
+
+        #navbar .navbarmenu>ul {
+            list-style-type: none;
+            height: 100%;
+        }
+
+        #navbar .navbarmenu>ul>li {
+            float: left;
+            height: 100%;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            margin-left: 30px;
+            position: relative;
+        }
+
+        #navbar .navbarmenu>ul>li>a {
+            font-size: 16px;
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        #navbar .navbarmenu>ul>li>ul {
+            list-style: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 200px;
+            background-color: #1D9EAD;
+            display: none;
+        }
+
+        #navbar .navbarmenu>ul>li>ul>li {
+            top: 0;
+            left: 100%;
+        }
+
+        #navbar .navbarmenu>ul>li>ul>li>a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14;
+        }
+
+        #navbar .navbarmenu>ul>li:hover>ul {
+            display: block;
+        }
+
+        #navbar .search {
+            float: left;
+            width: 192px;
+            height: 26px;
+            margin-top: 5px;
+            background: #02e4fd;
+            margin-left: 30px;
+            border-radius: 13px;
+        }
+
+        #navbar .search input {
+            font-weight: bold;
+            background: none;
+            margin-left: 7px;
+            margin-top: 5px;
+            color: rgb(255, 255, 255);
+            border: none;
+            display: block;
+            float: left;
+            width: 85%;
+        }
+
+        #navbar .search input:focus {
+            outline: none;
+        }
+
+        #navbar .search span {
+            color: white;
+            font-size: 1.1rem;
+            display: block;
+            float: left;
+            margin-top: 4px;
+        }
+
+        #navbar .lang {
+            float: left;
+            margin-left: 50px;
+            margin-top: 6px;
+        }
+        #center{
+            margin: auto;
+            height: 100%;
+            margin: 20px 100px 100px 100px;
+        }
+        #center .title{
+            text-align:center; 
+            color:#1D9EAD; 
+            padding-top: 30px;
+            font-weight: bold;
+            font-size: 50px;
+            text-transform: uppercase;
+        }
+        #center .name{
+            color: #16898D; padding-top: 20px; font-size: 20px; font-weight: 500;
+        }
+        #center .content{
+            margin-top: 20px;
+        }
+        #footer{
+            height: auto;
+            padding-top: 70px;
+            padding-bottom: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-left: 50px;
+            margin-right: 50px;
+            background:#e5e6e5;
+            margin: 0% auto;
+        }
+        #footer .left {
+            height: 100%;
+            margin-left: 50px;
+            margin-right: 50px;
+            float: left;
+            position: relative;
+            padding: auto;
+        }
+
+        #footer .left p {
+            line-height: 1.5;
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif';
+
+        }
+
+        #footer .center {
+            height: 100%;
+            float: left;
+            margin-left: 50px;
+            margin-right: 50px;
+            padding: auto;
+        }
+
+        #footer .center h3 {
+            font-weight: 600;
+            font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif'
+        }
+
+        #footer .center ul {
+            padding-top: 20px;
+            list-style: none;
+        }
+
+        #footer .center ul li {
+            text-decoration: none;
+            padding-top: 10px;
+        }
+
+        #footer .right {
+            height: 100%;
+            margin-left: 50px;
+            margin-right: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #footer .right p {
+            font-size: 1.17em;
+            font-weight: 500;
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif';
+            color: #177C88;
+        }
+
+        #footer .right .fa {
+            color: #1D9EAD;
+            padding: 20px;
+            font-size: 25px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <div class="navbarmenu">
+            <ul>
+                <li> <a href="index.html">HOME</a> </li>
+                <li> <a href="">GIỚI THIỆU</a> </li>
+                <li> <a href="">TOUR TRONG NƯỚC</a>
+                    <ul>
+                        <li> <a href="">DU LỊCH BẮC BỘ</a> </li>
+                        <li> <a href="">DU LỊCH TRUNG BỘ</a> </li>
+                        <li> <a href="">DU LỊCH NAM BỘ</a> </li>
+                    </ul>
+                </li>
+                <li> <a href="">TOUR NƯỚC NGOÀI</a>
+                    <ul>
+                        <li> <a href="">VISA QUỐC TẾ</a> </li>
+                        <li> <a href="">KHÁCH SẠN</a> </li>
+                        <li> <a href="">VẬN CHUYỂN</a> </li>
+                        <li> <a href="">VÉ MÁY BAY</a> </li>
+                    </ul>
+                </li>
+                <li> <a href="">BLOG DU LỊCH</a> </li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Tìm kiếm...">
+            <span class="glyphicon glyphicon-search"></span>
+        </div>
+        <div class="lang">
+            <a href="">
+                <img src="English.png" alt="">
+            </a>
+        </div>
+    </div>
+    <div id="center">
+        <p class="title">Giới thiệu</p>
+            <p class="name">Giới Thiệu Công Ty Cổ Phần Quốc Tế Double H</p>
+            <p class="content">Công ty cổ phần Quốc tế DOUBLE H thành lập được từ năm 2014 theo quyết định của Sở Kế hoạch Đầu tư tỉnh
+                Phú Thọ với mã số doanh nghiệp là 2600921239.</p>
+            <p class="content">Với gần 5 năm hoạt động trong lĩnh vực tư vấn du học, DOUBLE H đã dần trở thành địa chỉ uy tín dành cho
+                các bậc phụ huynh và học sinh khắp cả nước. Hàng ngàn học sinh đã xuất cảnh thành công và đang học tập
+                tại môi trường quốc tế năng động.</p>
+            <p class="content">Với phương châm coi chính khách hàng như những người thân trong gia đình, F5 Tour cam kết mang đến những dịch vụ chất lượng với mức giá hợp lý nhất cho khách hàng.</p>
+            <p class="content">- Tổ chức Tour du lịch trong nước</p>
+            <p class="content">- Tổ chức tour du lịch nước ngoài</p>
+            <p class="content" >- Tổ chức tour du lịch quốc tế ở Việt Nam</p>
+            <p class="content">- Dịch vu VISA</p>
+            <p class="content">- Đại lý vé máy bay</p>
+            <p class="content">- Đặt phòng dịch vụ nước ngoài.</p>
+        </div>
+        
+    </div>
+    <div id="footer">
+        <div class="left">
+            <p> <strong>Địa chỉ:</strong> Tầng 4, số 147 Mai Dịch, Cầu Giấy, Hà Nội<br> VPGD: P1802 – C2 D’Capitale Trần
+                Duy Hưng, Hà Nội</p>
+            <p>Hotline:<strong>024 6259 8807</strong></p>
+            <p>Email:<strong>info@webtravel.vn</strong></p>
+        </div>
+        <div class="center">
+            <h3>VỀ WEBTRAVEL - GIẢI PHÁP BÁN TOUR DỄ DÀNG</h3>
+            <p>Giới Thiệu</p>
+            <p>Liên Hệ</p>
+            <p>Điều Kiện và Điều Khoản</p>
+        </div>
+        <div class="right">
+            <p>Follow us</p>
+            <div class="right-link">
+                <a href="https://www.facebook.com/ktqdNEU/" class="fa fa-facebook"></a>
+                <a href="https://www.youtube.com/channel/UCV24tBVKuhkSC1kd36FbvmA" class="fa fa-youtube"></a>
+                <a href="https://twitter.com/DaiHocKTQD" class="fa fa-twitter"></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
